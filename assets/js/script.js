@@ -110,8 +110,8 @@ function incrementWrongAnswer() {
 
 /**
  * Displays numbers in the addition question shown to the user to guess
- * @param {*} operand1 
- * @param {*} operand2 
+ * @param {int} operand1 
+ * @param {int} operand2 
  */
 function displayAdditionQuestion(operand1, operand2) {
     document.getElementById('operand1').textContent = operand1;
@@ -120,6 +120,11 @@ function displayAdditionQuestion(operand1, operand2) {
 
 }
 
+/**
+ * Displays numbers in the subtraction question shown to the user to guess
+ * @param {int} operand1 
+ * @param {int} operand2 
+ */
 function displaySubtractQuestion(operand1, operand2) {
     document.getElementById('operand1').textContent = operand1 > operand2 ? operand1 : operand2;
     document.getElementById('operand2').textContent = operand1 > operand2 ? operand2 : operand1;
@@ -128,11 +133,22 @@ function displaySubtractQuestion(operand1, operand2) {
 
 /**
  * Displays numbers in the multiplication question shown to the user to guess
- * @param {*} operand1 
- * @param {*} operand2 
+ * @param {int} operand1 
+ * @param {int} operand2 
  */
 function displayMultiplyQuestion(operand1, operand2) {
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2;
     document.getElementById('operator').textContent = "x";
+}
+
+/**
+ * Displays numbers in the multiplication question shown to the user to guess
+ * @param {int} operand1 
+ * @param {int} operand2 
+ */
+function displayDivisionQuestion(operand1, operand2) {
+    document.getElementById('operand1').textContent = operand1;
+    document.getElementById('operand2').textContent = operand2;
+    document.getElementById('operator').textContent = "/";
 }
